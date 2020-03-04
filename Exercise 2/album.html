@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="album.js"></script>
+    <script src="albumWithFiltering.js"></script>
     <script>
         console.log(localStorage.getItem("albumId"))
     </script>
     <header id="header"></header>
 
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+
     <a href="homepage.html">Back to Author's Homepage</a>
 
-    <div id = "album"></div>
+    <ul id = "album"></div>
 
     
     
