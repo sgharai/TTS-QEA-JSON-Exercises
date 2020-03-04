@@ -14,7 +14,7 @@ fetch(`http://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
         let photoPost = document.createElement("li")
         photoPost.setAttribute("id", "photoTitle")
         photoPost.innerHTML = `<img src=${data[photo].thumbnailUrl}>
-        <br> <h3> Title: ${data[photo].title}</h3>`
+        <br> <h3>${data[photo].title}</h3>`
         document.getElementById("album").appendChild(photoPost);
     }
 })
@@ -35,8 +35,8 @@ function myFunction() {
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
+    h3 = li[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
     } else {
