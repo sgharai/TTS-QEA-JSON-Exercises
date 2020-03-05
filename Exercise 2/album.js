@@ -19,19 +19,17 @@ fetch(`http://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
     }
 })
 
-.then(function(myFunction) {
-    document.getElementById("myInput").addEventListener('onkeyup', myFunction )
-})
 
-function myFunction() {
+const searchInput = document.getElementById("searchInput")
+
+searchInput.onkeyup = function() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
+  input = document.getElementById('searchInput');
   filter = input.value.toUpperCase();
   ul = document.getElementById("album");
   li = ul.getElementsByTagName('li');
 
-  console.log(li)
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {

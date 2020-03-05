@@ -11,17 +11,26 @@ fetch('http://jsonplaceholder.typicode.com/users')
 
 
     })
+    
 
+const submitButton = document.getElementById("submitButton")
 
-function onSubmit(){
+submitButton.onclick = function onSubmit(){
     event.preventDefault();
 
     let inputtedUsername = document.getElementById("username").value
     let loginMessage = document.createElement ("p")
     if (usernames.includes(inputtedUsername)) {
-        loginMessage.innerHTML = "Login successful. Click below to go to User Homepage!" 
+        loginMessage.innerHTML = "Login successful. Redirecting you to user's homepage..." 
+        setTimeout(function(){
+            window.location.href = 'homepage.html'
+        }, 1000)
     } else {
-        loginMessage.innerHTML = "Hmm...no user with that username was found. Try again!" 
+        loginMessage.innerHTML = "Hmm...no user with that username was found. Try again!"
+        setTimeout(function(){
+            loginMessage.innerHTML = ""
+            location.reload()
+        }, 2000) 
     }
 
     document.getElementById("response").appendChild(loginMessage)
