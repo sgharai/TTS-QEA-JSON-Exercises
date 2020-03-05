@@ -2,11 +2,13 @@
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
+    width: calc(100% - 63px);
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
     margin-bottom: 12px; /* Add some space below the input */
+    display: block;
+    margin-right: 10px
   }
   
   #album {
@@ -16,9 +18,9 @@
     margin: 0;
   }
   
-  #album li a {
+  #album li {
     border: 1px solid #ddd; /* Add a border to all links */
-    margin-top: -1px; /* Prevent double borders */
+    margin-top: 5px; /* Prevent double borders */
     background-color: #f6f6f6; /* Grey background color */
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove default text underline */
@@ -33,4 +35,16 @@
 
   ul {
     list-style-type: none;
+  }
+
+  img {
+    margin-top: 10px;
+  }
+
+  h3 {
+    margin-top: 5px
+  }
+
+  h1 {
+    text-align: center;
   }
